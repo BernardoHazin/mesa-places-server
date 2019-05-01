@@ -31,17 +31,11 @@ app.use((req, res, next) => {
   })(req, res, next)
 })
 
-app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
-
 /** @description setting up graphql endpoint */
 app.use(
   '/graphql',
   graphqlExpress(req => ({ schema, context: { models, req } }))
 )
-
-/** @description serve client static files */
-const dir = path.join(__dirname, './public')
-app.use(express.static(dir))
 
 const server = createServer(app)
 

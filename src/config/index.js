@@ -13,8 +13,6 @@ module.exports = {
   },
   db: {
     database: process.env.DB_NAME || 'test',
-    user: 'root',
-    password: 'root',
     options: {
       dialect: process.env.DIALECT || 'sqlite',
       storage: './safe.lite',
