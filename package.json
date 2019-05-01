@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "serve": "node ./src/app.js",
+    "start": "node ./src/app.js",
     "test": "jest --coverage"
   },
   "license": "MIT",
