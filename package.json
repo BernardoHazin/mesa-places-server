@@ -31,7 +31,6 @@
     "subscriptions-transport-ws": "^0.9.14"
   },
   "devDependencies": {
-    "dotenv": "^7.0.0",
     "jest": "^24.7.1",
     "supertest": "^4.0.2"
   }
