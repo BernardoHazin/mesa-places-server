@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./src/app.js",
+    "test": "jest --coverage"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "consola": "^2.6.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "fb": "^2.0.0",
+    "graphql": "^0.13.2",
+    "graphql-server-express": "^1.4.0",
+    "graphql-subscriptions": "^0.5.8",
+    "graphql-tools": "^3.1.1",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.4.0",
+    "nodemailer": "^6.1.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "sequelize": "^5.7.6",
+    "sqlite3": "^4.0.6",
+    "subscriptions-transport-ws": "^0.9.14"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "jest": "^24.7.1",
+    "supertest": "^4.0.2"
+  }
+}

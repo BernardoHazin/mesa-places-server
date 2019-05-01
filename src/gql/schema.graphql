@@ -1,0 +1,64 @@
+scalar JSON
+
+type Query {
+  getPlace(place: String!, radius: Int!, lat: Float, lng: Float): [Place]
+  getAvaliations(placeId: String!): [Avaliation]
+  login(email: String!, password: String!): User!
+  fbLogin(accessToken: String!): User!
+}
+
+type Mutation {
+  registerUser(email: String!, name: String!, password: String!): User!
+  changeName(name: String!): User!
+  changePasswordRequest: String!
+  changePassword(password: String!, newPassword: String!): String!
+  setFavorite(placeId: String!, placeName: String!, placeIcon: String!): String!
+  addAvaliation(
+    placeId: String!
+    userEmail: String!
+    rating: Int!
+    comment: String
+  ): String!
+}
+
+type Subscription {
+  avaliationAdded: [Avaliation]
+}
+
+type User {
+  email: String!
+  name: String!
+  token: String!
+  profileImg: String!
+  createdAt: String!
+  updatedAt: String!
+  favorites: [Favorite]!
+}
+
+type Place {
+  id: String
+  icon: String
+  name: String
+  address: String
+  phone: String
+  rating: String
+  website: String
+  isOpen: Boolean
+  lat: Float
+  lng: Float
+}
+
+type Avaliation {
+  name: String
+  email: String
+  placeId: String
+  profileImg: String
+  rating: Int
+  comment: String
+}
+
+type Favorite {
+  placeId: String
+  placeName: String
+  placeIcon: String
+}
