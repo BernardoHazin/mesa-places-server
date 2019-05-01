@@ -32,12 +32,13 @@ const changePasswordHtml = id => `
           padding: 15px;
           font-weight: bold;
           border-radius: 10px;
+          text-decoration: none;
         }
       </style>
     </head>
     <body>
     <center>
-      <img src="https://mesa-places-client.herokuapp.com/img/logo.0750b83f.png" alt="Logo">
+      <img width="200px" src="https://mesa-places-client.herokuapp.com/img/logo.0750b83f.png" alt="Logo">
       <h1>Mesa places</h1>
       <h2>Alterar senha</h2>
       <a href="https://mesa-places-client.herokuapp.com/#/${id}">Clique aqui para continuar</a>
