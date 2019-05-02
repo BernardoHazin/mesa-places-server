@@ -20,7 +20,10 @@ const schema = makeExecutableSchema({
 })
 
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  optionsSuccessStatus: 200
+}))
 
 /** @description Forward user authentication  */
 app.use((req, res, next) => {
